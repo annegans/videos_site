@@ -1,0 +1,14 @@
+<h1>I'm the edit page </h1>
+
+<p><%= @video['title']%></p>
+<p><%= @video['description']%></p>
+<p><%= @video['url']%></p>
+<p><%= @video['genre']%></p>
+
+<form action="/videos/<%= @video['id'] %>/update" method="POST">
+  <input type="text" name="title" placeholder="enter a title" value="<%= @video['title'] %>">
+  <input type="text" name="description" placeholder="enter a description" value="<%= @video['description'] %>">
+  <input type="text" name="url" placeholder="enter a url" value="<%= @video['url'] %>">
+  <input type="text" name="genre" placeholder="enter a genre" value="<%= @video['genre'] %>">
+    <button>UPDATE VIDEO</button>
+</form>
